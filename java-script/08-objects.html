@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+
+  <body>
+    <script>
+      /*const product = {
+        name: 'T-shirt',
+        price: 1560,
+        brand: 'prada'
+      };
+      console.log(product);
+      console.log(product.brand);
+      console.log(product.name);
+
+      product.price = 1540;
+      console.log(product);
+      product.name = 'shoes';
+      console.log(product);
+
+      product.newStyle = 'hat';
+      console.log(product);
+
+      product.myAcsessory = 'rings';
+      console.log(product);
+
+      delete product.myAcsessory;
+      console.log(product);
+      */ 
+     // inside the object is called property.
+    /* product2 = {
+      items: 'book',
+      author: 'james clear',
+      title: 'atomic habit',
+      ['page']: 250,
+      rating: {
+        review: 'this is a good book. very recommended!.',
+        count: 87
+      },
+// we can add function inside the objects.
+      fun: function goodBook(){
+        console.log('someone who need self-improvement. best investment.');
+      }
+      
+     };
+     console.log(product2);
+     console.log(['product2']);
+     console.log(product2.author);
+     console.log(['page-250']);
+     product2.fun();
+
+
+     // built-in from js to json.
+     console.log(JSON.stringify(product2));
+
+     // built-in convert json back to js.
+
+     const jsonString = JSON.stringify(product2);
+     console.log(JSON.parse(jsonString));*/ 
+
+     console.log('hello'.length);
+     console.log('hello! welcome to columbus!'.toUpperCase());
+
+     const Object1 = {
+      message: 'this is not human'
+     };
+
+     const object2 = Object1;
+
+     Object1.message = 'good country!';
+     console.log(Object1);
+     console.log(object2);
+
+     const object3 = {
+      message: 'good country!'
+     };
+
+     console.log(object3 === Object1);
+     console.log(Object1 === object2);
+// this is called destructering.
+     const object4 = {
+      message: 'USA',
+      contenant: 'America',
+      city: 'New York'
+     };
+
+     const {message, contenant, city} = object4;
+     console.log(message);
+     console.log(contenant);
+     console.log(city);
+
+// shorthand property.
+     
+    </script>
+  </body>
+</html>

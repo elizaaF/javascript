@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Function</title>
+  </head>
+
+  <body>
+    <button onclick="
+      
+      " class="js-button">Click</button>
+    <script>
+      const clickElement = document.querySelector('.js-button');
+
+      const eventListener = () => {
+        console.log('click');
+      }
+
+      // use.addEventListener to practice instead of using "onclick".
+
+      clickElement.addEventListener('click', eventListener);
+
+      clickElement.removeEventListener('click', eventListener);
+
+      clickElement.addEventListener('click', () =>{
+        console.log('click4');
+      })
+      //function are values so, it can be stored in the variable. and variable can be an object. 
+      function greeting(){
+        console.log('hello');
+      }
+
+      greeting();
+
+      const function1 = function greeting(){
+        console.log('hello');
+      };
+
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      
+      // function can be used as object itself, because function are value.
+      const object1 = {
+        num: 2,
+        fullName: function greeting(){
+          console.log('hello');
+        }
+      };
+
+      object1.fullName();
+
+      //passing a value into a function
+
+      function display(param){
+        console.log(param);
+      }
+      display(3);
+
+      function display2(name){
+        console.log('hello'+ ' ' + name);
+      }
+      display2('zira');
+
+      function display3(age){
+        console.log(`your age is: ${age} old`);
+      }
+      display3(19);
+
+      //passing the function into another function
+
+      function run(param){
+        param();
+      }
+      run(function(){
+        console.log('hello elizaa');
+      });
+
+
+      // setTimeout() : allows us to run function in the future.
+      // setTimeout: we gave a function and the we call the function after a certain amount of time.
+
+      setTimeout(function(){
+        console.log('timeout');
+        console.log('okay wait for me'); // Syncrnous code: will wait the line(setTimeout) to finish before going to the neext line
+      }, 3000);
+
+
+      // Asyncronous code: won't wait for the line(setTimeout) to finish before going to the next line.
+
+        console.log('next line');
+        console.log('dont stop');
+
+      //setInterval: it will keep function running in the future.
+      setInterval(function(){
+        console.log('keep moving');
+      }, 4000);
+
+      // another foor loop (eachFor) method in function. 
+
+      const myRoutine = [
+        'make dinner',
+        'read a book',
+        'watch youtube'
+      ].forEach(function(myRoutine){
+        console.log(myRoutine);
+      });
+
+      [
+        'do a laundry',
+        'coding time',
+        'make some snack'
+      ].forEach(function(value, index){
+        if(value === 'do a laundry'){
+          // this is the same method as continue(to skip the value) but forEach method doesnt work on continue or break.
+          return;
+        }
+        console.log(value);
+        console.log(index);
+      })
+
+// shorter way to write function is Arrow function
+
+      const regularFunction = function(param, param2){
+        console.log('this is the same thing as arrow function');
+        return 5;
+      }
+
+      const arrowFunction = (param, param2) => {
+        console.log('this is the same things as regular function');
+        return 5;
+      }
+      arrowFunction();
+
+      // all of this is a shorter function. to make code more organized and easy to read.
+      const oneParam = param => {
+        console.log(param + 4);
+      }
+      oneParam(6);
+
+      const calculate = angka => {
+        console.log(angka + 7);
+      }
+      calculate(78);
+
+      const oneLine = () => 45 + 90;
+      console.log(oneLine());
+
+      const twoLine = (name) => `hello my name is:${name}`;
+      console.log(twoLine('elizaa'));
+
+      const Id = (age) => `my age is ${age}`;
+      console.log(Id(19));
+
+    </script>
+  </body>
+  
+</html>
